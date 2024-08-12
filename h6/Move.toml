@@ -1,0 +1,16 @@
+[package]
+name = "h6"
+version = "1.0.0"
+authors = []
+
+[addresses]
+basic_address = "0xb5bd399904c677df089612da6513835cd46f2512923ff870b68cebf27bda66d8"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
