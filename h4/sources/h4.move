@@ -1,4 +1,4 @@
-module 0xa19a0ee429b5311629be59c030574e43ae7be8dd55a098e7475dd0fb8dd4e214::h4 {
+module addr_1::h4 {
     struct MyData has key, store {
         value: u8
     }
