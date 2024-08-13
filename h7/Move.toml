@@ -1,0 +1,16 @@
+[package]
+name = "h7"
+version = "1.0.0"
+authors = []
+
+[addresses]
+basic_address = "0x1216f5648d824d22b1a327e8cbdf1849f753a62a5ae9d863f74db8e6834938a8"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
