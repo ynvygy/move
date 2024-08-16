@@ -1,0 +1,15 @@
+[package]
+name = "h9"
+version = "1.0.0"
+authors = []
+
+[addresses]
+basic_address = "0x33f8e336982d50960612fc78cf5bb997a8bcf95d91537016f165a3bd7c947df5"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
