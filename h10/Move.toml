@@ -1,0 +1,16 @@
+[package]
+name = "h10"
+version = "1.0.0"
+authors = []
+
+[addresses]
+basic_address = "0xc8a7ed641e16036fbbf79343d8e61db3ce04e734ce7c1923aa9cf51d2a701ae0"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
