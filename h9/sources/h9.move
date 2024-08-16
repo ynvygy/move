@@ -33,7 +33,9 @@ module basic_address::h9 {
         move_to(&object_signer, my_object);
 
         // 4. Use the constructor_ref to get the address of the object
-        let get_address = signer::address_of(&object_signer);
+        let get_address = object::object_from_constructor_ref<ObjectCore>(
+          &constructor_ref
+        );
 
         // 5. Emit the address using the event you defined
         let object_address_event = GetObjectAddress {
@@ -50,10 +52,7 @@ module basic_address::h9 {
         create_example_object(&account, utf8(b"TestName"), 100);
 
         let caller_address = signer::address_of(&account);
-        if (exists<ExampleObject>(caller_address)) {
-            let msg: String = utf8(b"This is the String I want to print to the screen.");
-            debug::print(&msg);
-        };
+
         assert!(exists<ExampleObject>(caller_address), error::not_found(0));
     }
 }
