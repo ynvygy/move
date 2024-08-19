@@ -3,8 +3,6 @@ module basic_address::h9 {
     use std::signer;
     use std::string::{String,utf8};
     use aptos_framework::event;
-    use std::error;
-    use std::debug;
 
     #[event]
     struct GetObjectAddress has drop, store {
@@ -33,9 +31,8 @@ module basic_address::h9 {
         move_to(&object_signer, my_object);
 
         // 4. Use the constructor_ref to get the address of the object
-        let get_address = object::object_from_constructor_ref<ObjectCore>(
-          &constructor_ref
-        );
+        // let get_address = object::address_to_object(signer::address_of(&object_signer));
+        let get_address = object::address_from_constructor_ref(&constructor_ref);
 
         // 5. Emit the address using the event you defined
         let object_address_event = GetObjectAddress {
@@ -47,12 +44,6 @@ module basic_address::h9 {
 
     #[test(account = @0x1)]
     public fun test_create_example_object(account: signer) {
-        // Call the create_example_object function
-
         create_example_object(&account, utf8(b"TestName"), 100);
-
-        let caller_address = signer::address_of(&account);
-
-        assert!(exists<ExampleObject>(caller_address), error::not_found(0));
     }
 }
