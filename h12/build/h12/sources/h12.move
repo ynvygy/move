@@ -1,5 +1,4 @@
 module basic_address::h12 {
-    //use aptos_framework::object::{Self, Object};
     use aptos_token_objects::collection;
     use std::option;
     use std::string::{utf8};
