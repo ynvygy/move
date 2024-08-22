@@ -1,0 +1,19 @@
+[package]
+name = "h15"
+version = "1.0.0"
+authors = []
+
+[addresses]
+basic_address = "_"
+std = "0x1"
+aptos_std = "0x1"
+aptos_framework = "0x1"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
